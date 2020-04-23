@@ -43,6 +43,53 @@
   |\s             | Matches white space character (space or tab space).|
   |\S             | Any character other than white space.|
   |\w             | Any word character (a letter, a number or an underscore). That also used with character set [a-zA-Z0-9_].|
-  |\W             | Not a word character. That also used with character set [^a-zA-Z0-9_].|
+  |\W             | Not a word character. That also used with negated character set [^a-zA-Z0-9_].|
 
-  
+
+  ## Qualifiers
+
+  | Meta Character | Description|
+  |  :----:  | :----- |
+  |+|  To match with atleat one or more preceeding character |
+  |*| To match with zero or more preceeding character|
+  |?| To make a character optional or to make preceeding characters lazy |
+
+
+  ## And for more Meta characters visit [Regex](https://regexr.com/)
+
+
+
+## java.util.regex package
+
+* To search and match a string in java application "java.util.regex" is given in api.
+
+* Let's explore classes in that package.
+
+    - Pattern
+    - Matcher
+
+### Pattern Class
+
+* A compiled representation of a regular expression.
+
+* With a regular experssion that use to match a string an instance of Pattern class is required. Pattern instance can be created using "compile()". At the time of creating the instance of the Pattern that regular experssion is going to compiled for proper formation. If regular experssion is wrong it gives runtime error.
+
+* All the regular experssions and its usage is given in java.api 
+
+Example:
+
+    Pattern patternInstance= Pattern.compile("^a\w+k$");
+
+Above pattern instance is created to match the string that starts with 'a' and ends with 'k' with any word characters (a-zA-Z0-9_) between them.
+
+### Matcher Class
+
+* To match given string with compiled regular experssion Matcher class can be used.
+
+* To create instance of Matcher, in Pattern class, matcher() is given.
+
+        Matcher matcherInstance = patternInstance.matcher("abhishek");
+
+* With the matcherInstance we can test weather given string is matched with provided regular experssion.
+
+        boolean matched = matcherInstance.matches();
