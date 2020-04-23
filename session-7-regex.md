@@ -74,7 +74,7 @@
 
 * With a regular experssion that use to match a string an instance of Pattern class is required. Pattern instance can be created using "compile()". At the time of creating the instance of the Pattern that regular experssion is going to compiled for proper formation. If regular experssion is wrong it gives runtime error.
 
-* All the regular experssions and its usage is given in java.api 
+* All the regular experssions and its usage is given in [java api at Pattern class description](https://docs.oracle.com/javase/8/docs/api/)
 
 Example:
 
