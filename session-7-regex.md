@@ -93,3 +93,31 @@ Above pattern instance is created to match the string that starts with 'a' and e
 * With the matcherInstance we can test weather given string is matched with provided regular experssion.
 
         boolean matched = matcherInstance.matches();
+
+## Problem Statement
+
+* Write a program to find number of strings in a given list that contains 'a' character a first.
+
+        public class Demo{
+            public static void main(String[] args){
+                List<String> names = Arrays.asList("kumar", "abhishek", "ajay", "suresh", "akshay");
+
+                Pattern patternInstance = Pattern.compile("^a\w*");
+
+                Integer count = 0;
+
+                for(String name: names){
+                   Matcher matcherInstance = patternInstance.matcher(name);
+                   if(matcherInstance.matches()){
+                        count++;
+                   }
+                }
+
+                System.out.println(count);
+            }
+        }
+
+
+## Alternative Solutions
+
+*  The same problem can be solved in different ways.
