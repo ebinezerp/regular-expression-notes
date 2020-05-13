@@ -96,7 +96,7 @@ Above pattern instance is created to match the string that starts with 'a' and e
 
 ## Problem Statement
 
-* Write a program to find number of strings in a given list that contains 'a' character a first.
+* Write a program to find number of strings in a given list that contains 'a' character at first.
 
         public class Demo{
             public static void main(String[] args){
