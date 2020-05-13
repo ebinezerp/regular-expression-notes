@@ -145,3 +145,4 @@ Above pattern instance is created to match the string that starts with 'a' and e
 ## Alternative Solutions
 
 * The same problem can be solved in different ways.
+* Using Pattern.matches() method. see [example](https://https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example2)
