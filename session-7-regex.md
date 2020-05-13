@@ -132,8 +132,8 @@ Above pattern instance is created to match the string that starts with 'a' and e
 		          Pattern patternInstance = Pattern.compile("a\\w*");
 
 		          Long count = names.stream()
-				                        .filter(name -> patternInstance.matcher(name).matches())
-				                        .count();
+				                   .filter(name -> patternInstance.matcher(name).matches())
+				                   .count();
 
 		          System.out.println(count);
 
@@ -144,4 +144,4 @@ Above pattern instance is created to match the string that starts with 'a' and e
 
 ## Alternative Solutions
 
-*  The same problem can be solved in different ways.
+* The same problem can be solved in different ways.
