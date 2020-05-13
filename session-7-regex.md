@@ -118,6 +118,30 @@ Above pattern instance is created to match the string that starts with 'a' and e
         }
 
 
+* In Java 8th Version
+
+        import java.util.Arrays;
+        import java.util.List;
+        import java.util.regex.Pattern;
+
+        public class DemoInJava8 {
+	        public static void main(String[] args) {
+
+		          List<String> names = Arrays.asList("kumar", "abhishek", "ajay", "suresh", "akshay");
+
+		          Pattern patternInstance = Pattern.compile("a\\w*");
+
+		          Long count = names.stream()
+				                        .filter(name -> patternInstance.matcher(name).matches())
+				                        .count();
+
+		          System.out.println(count);
+
+	          }
+
+        }
+
+
 ## Alternative Solutions
 
 *  The same problem can be solved in different ways.

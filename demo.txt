@@ -1,7 +1,32 @@
-rajesh
-rakesh
-abhi
-sanjay
-ambetkar
-kumar
-sukumar
+regular experssion is character sqeuence is used to match a given string 
+
+
+Strong Password
+   atlease one small , one capital, one numeric , one special 
+
+
+
+   Abe*569
+   &*)A13b
+
+
+Regular experssion
+
+  regular character
+  meta characters
+
+     bounderies
+
+    ^ $
+
+
+    ^a    b$
+
+    \b
+
+    \w (wordset) [a-zA-Z0-9_]
+
+    character - . (any character other than \n)
+
+
+    ^.*r${4,}
