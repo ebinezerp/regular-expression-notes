@@ -45,7 +45,7 @@
   |\w             | Any word character (a letter, a number or an underscore). That also used with character set [a-zA-Z0-9_].|
   |\W             | Not a word character. That also used with negated character set [^a-zA-Z0-9_].|
 
-  ## Qualifiers
+  ## Quantifiers
 
   | Meta Character | Description|
   |  :----:  | :----- |
@@ -179,3 +179,11 @@ Above pattern instance is created to match the string that starts with 'a' and e
 
 See example program of name validation [here](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example3).
 
+
+## References
+
+* https://docs.oracle.com/javase/8/docs/api/
+
+* https://regexr.com/
+
+* https://examples.javacodegeeks.com/category/core-java/util/regex/
