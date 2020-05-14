@@ -24,7 +24,7 @@
 
   Let's discuss how those meta characters behave and more value in text searching and matching.
 
-    ## Anchors and Boundaries
+  ## Anchors and Boundaries
 
   | Meta Character | Description|
   |  :--------:    |------------|
@@ -33,9 +33,9 @@
   |\b              | Starting or Ending of any string.|
   |\B              | Anywhere other than start and end of the string.|
   
-    ## Character Classes
+  ## Character Classes
 
-   * Character classes uses to match a character with a specific character set.
+  * Character classes uses to match a character with a specific character set.
 
   | Meta Character| Description|
   |   :----:      | :--------  |
@@ -45,7 +45,6 @@
   |\w             | Any word character (a letter, a number or an underscore). That also used with character set [a-zA-Z0-9_].|
   |\W             | Not a word character. That also used with negated character set [^a-zA-Z0-9_].|
 
-
   ## Qualifiers
 
   | Meta Character | Description|
@@ -54,10 +53,7 @@
   |*| To match with zero or more preceeding character|
   |?| To make a character optional or to make preceeding characters lazy |
 
-
   ## And for more Meta characters visit [Regex](https://regexr.com/)
-
-
 
 ## java.util.regex package
 
@@ -65,8 +61,8 @@
 
 * Let's explore classes in that package.
 
-    - Pattern
-    - Matcher
+  * Pattern
+  * Matcher
 
 ### Pattern Class
 
@@ -94,7 +90,7 @@ Above pattern instance is created to match the string that starts with 'a' and e
 
         boolean matched = matcherInstance.matches();
 
-## Problem Statement
+## Problem Statement - 1
 
 * Write a program to find number of strings in a given list that contains 'a' character at first.
 
@@ -102,7 +98,7 @@ Above pattern instance is created to match the string that starts with 'a' and e
             public static void main(String[] args){
                 List<String> names = Arrays.asList("kumar", "abhishek", "ajay", "suresh", "akshay");
 
-                Pattern patternInstance = Pattern.compile("^a\w*");
+                Pattern patternInstance = Pattern.compile("^a\\w*");
 
                 Integer count = 0;
 
@@ -117,7 +113,6 @@ Above pattern instance is created to match the string that starts with 'a' and e
             }
         }
 
-
 * In Java 8th Version
 
         import java.util.Arrays;
@@ -125,24 +120,62 @@ Above pattern instance is created to match the string that starts with 'a' and e
         import java.util.regex.Pattern;
 
         public class DemoInJava8 {
-	        public static void main(String[] args) {
+         public static void main(String[] args) {
 
-		          List<String> names = Arrays.asList("kumar", "abhishek", "ajay", "suresh", "akshay");
+            List<String> names = Arrays.asList("kumar", "abhishek", "ajay", "suresh", "akshay");
 
-		          Pattern patternInstance = Pattern.compile("a\\w*");
+            Pattern patternInstance = Pattern.compile("a\\w*");
 
-		          Long count = names.stream()
-				                   .filter(name -> patternInstance.matcher(name).matches())
-				                   .count();
+            Long count = names.stream()
+                       .filter(name -> patternInstance.matcher(name).matches())
+                       .count();
 
-		          System.out.println(count);
+            System.out.println(count);
 
-	          }
-
-        }
-
+       }
+      }
 
 ## Alternative Solutions
 
 * The same problem can be solved in different ways.
-* Using Pattern.matches() method. see [example](https://https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example2)
+
+### Solution - 1
+
+* Using Pattern.matches() method. see [example](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example2)
+
+  * Using of Pattern.matches() method some times may lead to performances issues.
+  
+  * In case of matching multiple strings  with same regular experssion using of this method causes performance issue because number of times same regular experssion has to compile again and again.
+
+  * So need to be careful in using above method.
+
+### Solution - 2
+
+* Using of String.matches(). See [example](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example3)
+
+  * While using String.matches() method also same issues that are occuring with Pattern.matches() will occur.
+
+## Problem Statement - 2
+
+### Name Validation
+
+* To consider a string as valid name, it should consists of only alphabet and white spaces with atleast 4 alphabet.
+
+* character ([a-z]) can be used for the alphabet and range {4,} can be used for atleast 4 character condition.
+
+      [a-z]{4,}
+
+* And for white space (\s) can be used. To make \s as optional qunatifier(?) can be used.
+
+      (\s)?
+
+* Together can be used to match a String with atleast 4 alphabet characters and with white space.
+
+      [a-z]{4,}(\s)?
+
+* A name may consists of multiple strings like "raja vijayendra varma", to match with multiple strings of same format, below regular experssion can be used with a additional qunatifier(+) to the above regular expression.
+
+      ([a-z]{4,}(\s)?)+
+
+See example program of name validation [here](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example3).
+

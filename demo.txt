@@ -1,32 +1,20 @@
-regular experssion is character sqeuence is used to match a given string 
+ebinezerperumala
+ebinezer perumala
+ebinezer  perumala
+ebinezer1perumala
+ebinezer 1 perumala
+ebinezer1 perumala
+ebinezer@perumala
+ebinezer @ perumala
+ebinezer
+ebinezer  
+abcdef
+ab
+madhu krishna murthi
+ ebinezer
 
 
-Strong Password
-   atlease one small , one capital, one numeric , one special 
 
 
 
-   Abe*569
-   &*)A13b
 
-
-Regular experssion
-
-  regular character
-  meta characters
-
-     bounderies
-
-    ^ $
-
-
-    ^a    b$
-
-    \b
-
-    \w (wordset) [a-zA-Z0-9_]
-
-    character - . (any character other than \n)
-
-
-    ^.*r${4,}
