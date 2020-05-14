@@ -177,7 +177,43 @@ Above pattern instance is created to match the string that starts with 'a' and e
 
       ([a-z]{4,}(\s)?)+
 
-See example program of name validation [here](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example3).
+See example program of name validation [here](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example4).
+
+## Problem Statement - 3
+
+### Strong Password
+
+* To consider a string as strong password it should consists of atleast one small, one capital alphabet, one numeric and one special character.
+
+* To check weather string consists of a small alphabet, use below regular experssion
+
+      (?=.*[a-z])
+
+  * ?=, is a lookahead regular expression used for searching
+
+  * ., represents any character otherthan next-line character.
+
+  * .*, is a quantifier represents zero or more character
+
+  * .*[a-z], represents a small alphabet that may follows 'n' of other characters
+
+* Like above, below regular expression can be used to search for capital alphabet in string.
+
+      (?=.*[A-Z])
+
+* Same kind of regular expression can be used for all the other conditions
+
+      (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).
+  
+* Last '.' (dot), represents any character after those.
+
+* To place condition of length of password, below regex can be used.
+
+      ((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])).{8,}
+
+  * Which presents atleast password length should be 8 characters and above.
+
+* See example program [here](https://github.com/ebinezerp/regular-expression-notes/tree/master/regular-expression-example/src/example5)
 
 
 ## References
